@@ -33,29 +33,33 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div className="header">
-        <div className="inputContainer">
-          <input
-            type="text"
-            placeholder="Task..."
-            name="task"
-            value={task}
-            onChange={handleChange}
-          ></input>
-          <input
-            type="number"
-            placeholder="Deadline (days)..."
-            name="deadline"
-            value={deadline}
-            onChange={handleChange}
-          ></input>
+        <div className="header">
+          <div className="inputContainer">
+            <input
+              type="text"
+              placeholder="Task..."
+              name="task"
+              value={task}
+              onChange={handleChange}
+            ></input>
+            <input
+              type="number"
+              placeholder="Deadline (days)..."
+              name="deadline"
+              value={deadline}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <button onClick={addTask}>Add Task</button>
         </div>
-        <button onClick={addTask}>Add Task</button>
-      </div>
       <div className="todoList">
-        {todoList.map((task: ITask, key: number) => {
-          return <TodoTask key={key} task={task} completeTask={completeTask} />;
-        })}
+        {todoList.length === 0 ? (
+          <p>No tasks to display...</p>
+        ) : (
+          todoList.map((task: ITask, key: number) => (
+            <TodoTask key={key} task={task} completeTask={completeTask} />
+          ))
+        )}
       </div>
     </div>
   );
