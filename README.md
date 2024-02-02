@@ -36,5 +36,5 @@ To run the Todo List App locally, follow these steps:
 
 ## Resources
 
-- [Todo List in ReactJS using TypeScript Tutorial](https://www.youtube.com/watch?v=bjnW2NLAofI) by [PedroTech]
+- [Todo List in ReactJS using TypeScript Tutorial](https://www.youtube.com/watch?v=bjnW2NLAofI) by PedroTech
 
